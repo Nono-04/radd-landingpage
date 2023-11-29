@@ -1,0 +1,60 @@
+{
+  "name": "project.l",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Tamino Seiler",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "android": "npm run build && npx cap run android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^4.8.0",
+    "@capacitor/app": "^4.1.1",
+    "@capacitor/browser": "^4.1.1",
+    "@capacitor/cli": "^4.8.0",
+    "@capacitor/core": "^4.8.0",
+    "@capacitor/device": "^4.1.0",
+    "@capacitor/geolocation": "^4.1.0",
+    "@capacitor/haptics": "^4.1.0",
+    "@capacitor/local-notifications": "^4.1.5",
+    "@capacitor/network": "^4.1.0",
+    "@capacitor/splash-screen": "^4.1.4",
+    "@capawesome/capacitor-badge": "^2.0.2",
+    "axios": "^0.27.2",
+    "core-js": "^3.25.0",
+    "date-fns": "^2.29.2",
+    "eslint": "^8.7.0",
+    "jwt-decode": "^3.1.2",
+    "leaflet": "^1.9.3",
+    "lodash.get": "^4.4.2",
+    "moment": "^2.29.4",
+    "pocketbase": "^0.16.0",
+    "prettier": "^2.5.1",
+    "vue": "^2.7.10",
+    "vue-eslint-parser": "^8.0.0",
+    "vue-router": "^3.6.4",
+    "vue-toast-notification": "^0.6.3",
+    "vuetify": "^2.6.15",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^2.0.4",
+    "@mdi/font": "^7.2.96",
+    "@mdi/js": "^7.2.96",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-router": "^5.0.8",
+    "@vue/cli-plugin-vuex": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.3.1",
+    "vue-cli-plugin-vuetify": "^2.5.5",
+    "vue-template-compiler": "^2.7.10",
+    "vuetify-loader": "^1.9.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

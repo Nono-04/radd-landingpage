@@ -1,0 +1,35 @@
+{
+  "appId": "np.Betriebshof.AppV2",
+  "appName": "Betriebshof",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "cleartext": true
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 4000,
+      "launchAutoHide": true,
+      "backgroundColor": "#ffffffff",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": true,
+      "androidSpinnerStyle": "large",
+      "iosSpinnerStyle": "small",
+      "spinnerColor": "#999999",
+      "splashFullScreen": true,
+      "splashImmersive": true,
+      "layoutName": "launch_screen",
+      "useDialog": true
+    },
+    "Badge": {
+      "persist": true,
+      "autoClear": false
+    },
+    "LocalNotifications": {
+      "smallIcon": "betriebshof",
+      "iconColor": "#488AFF",
+      "sound": "pop.wav"
+    }
+  }
+}
