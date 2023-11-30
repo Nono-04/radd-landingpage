@@ -40,14 +40,19 @@
             <img src="lurk.png" alt="Lurk Leo" />
         </div>
 
+        <div class="cat-campfire">
+            <img src="catssitting.webp" @click="playSound()" alt="Cats on Campfire" />
+        </div>
+
         <div class="embed" @click="enableEmbed()">
-            <div class=" embed greylayer" v-if="!embed">
+            <div class="embed greylayer" v-if="!embed">
                 <div class="greylayer-center">
                     <v-icon color="white" size="80px">mdi-play-circle</v-icon>
                 </div>
             </div>
             <div
-                id="twitch-embed" class="embed"
+                id="twitch-embed"
+                class="embed"
                 :style="!embed ? 'pointer-events: none;' : ''"
             ></div>
         </div>
@@ -104,6 +109,19 @@
             enableEmbed() {
                 this.embed = true;
                 console.log("Embed enabled");
+            },
+
+            playSound() {
+                // 1% chance to play different audio
+                if (Math.random() < 0.01) {
+                    const audio = new Audio("cat2.mp3");
+                    audio.play();
+                    console.log("Sound played");
+                    return;
+                }
+                const audio = new Audio("cat1.mp3");
+                audio.play();
+                console.log("Sound played");
             },
         },
 
@@ -220,6 +238,30 @@
         }
         100% {
             transform: translateX(-100%);
+        }
+    }
+
+    .cat-campfire {
+        position: absolute;
+        right: 0;
+        top: 139px;
+        z-index: 0;
+    }
+
+    .cat-campfire img {
+        animation: catLurk 3s ease-in-out;
+    }
+
+    @keyframes catLurk {
+        0% {
+            transform: translateX(100%);
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            transform: translateY(0);
+            opacity: 1;
         }
     }
 
