@@ -37,14 +37,14 @@
         </div>
 
         <div class="embed" @click="enableEmbed()">
-            <div class="greylayer" v-if="!embed">
+            <div class=" embed greylayer" v-if="!embed">
                 <div class="greylayer-center">
                     <v-icon color="white" size="80px">mdi-play-circle</v-icon>
                 </div>
             </div>
             <div
-                id="twitch-embed"
-                :style="!embed ? 'pointer-events: none; height: 80vh' : 'height: 80vh'"
+                id="twitch-embed" class="embed"
+                :style="!embed ? 'pointer-events: none;' : ''"
             ></div>
         </div>
 
@@ -166,6 +166,7 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
         pointer-events: none;
+        z-index: 9999;
     }
 
     .greylayer-center {
@@ -194,8 +195,8 @@
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
-        height: 80vh;
-        margin-top: 6rem;
+        height: calc(80vh - 2rem);
+        margin-top: 3rem;
     }
 
     .socials .v-btn {
