@@ -287,6 +287,12 @@
         }
     }
 
+    @media (max-width: 1100px) {
+        .cat-campfire {
+            display: none;
+        }
+    }
+
     .embed {
         position: absolute;
         left: 50%;
