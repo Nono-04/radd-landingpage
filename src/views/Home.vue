@@ -178,7 +178,7 @@
     }
 
     .radd-eyes {
-        position: absolute;
+        position: fixed !important;
         bottom: 0;
         left: 0;
     }
