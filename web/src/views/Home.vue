@@ -26,7 +26,7 @@
                     <v-icon color="red">mdi-youtube</v-icon>
                 </v-btn>
                 <v-btn icon @click="opensocial('discord')">
-                    <mdi-discord style="width: 24px; height: 24px" />
+                    <mdi-discord style="width: 24px; height: 24px" class="v-icon"></mdi-discord>
                 </v-btn>
                 <v-btn icon @click="opensocial('instagram')">
                     <v-icon color="#E1306C">mdi-instagram</v-icon>
