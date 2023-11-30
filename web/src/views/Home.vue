@@ -1,8 +1,12 @@
 <template>
     <div>
+        <christmaslightsVue style="z-index: 0" v-if="christmasEnabled" />
+        <snowflakes v-if="christmasEnabled" />
+
         <div class="title noselect">
             <v-avatar size="75px">
                 <img
+                    class="noselect"
                     src="https://static-cdn.jtvnw.net/jtv_user_pictures/ed2b2bc8-c614-413a-afab-d514c8cde52b-profile_image-70x70.png"
                     alt="Raddtrap"
                 />
@@ -37,11 +41,16 @@
         </div>
 
         <div class="lurk-leo">
-            <img src="lurk.png" alt="Lurk Leo" />
+            <img class="noselect" src="lurk.png" alt="Lurk Leo" />
         </div>
 
         <div class="cat-campfire">
-            <img src="catssitting.webp" @click="playSound()" alt="Cats on Campfire" />
+            <img
+                class="noselect"
+                src="catssitting.webp"
+                @click="playSound()"
+                alt="Cats on Campfire"
+            />
         </div>
 
         <div class="embed" @click="enableEmbed()">
@@ -71,12 +80,16 @@
     import raddeyes from "@/components/raddeyes.vue";
     import Vue from "vue";
 
+    import christmaslightsVue from "@/components/christmaslights.vue";
+    import snowflakes from "@/components/snowflakes.vue";
+
     export default Vue.extend({
-        components: { raddeyes },
+        components: { raddeyes, christmaslightsVue, snowflakes },
         name: "HomeView",
         data() {
             return {
                 embed: false,
+                christmasEnabled: false,
             };
         },
         methods: {
@@ -139,6 +152,12 @@
                 const player = embed.getPlayer();
                 player.play();
             });
+
+            const date = new Date();
+            // enable christmas lights in december
+            if (date.getMonth() === 11) {
+                this.christmasEnabled = true;
+            }
         },
     });
 </script>
