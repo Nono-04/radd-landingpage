@@ -30,6 +30,9 @@
                 <v-btn icon @click="opensocial('ko-fi')">
                     <v-icon color="#F16061">mdi-coffee</v-icon>
                 </v-btn>
+                <v-btn icon @click="opensocial('games')">
+                    <v-icon color="#9146FF">mdi-gamepad-variant</v-icon>
+                </v-btn>
             </v-row>
         </div>
 
@@ -87,6 +90,9 @@
                         break;
                     case "ko-fi":
                         window.open("https://ko-fi.com/raddtrap", "_blank");
+                        break;
+                    case "games":
+                        window.open("https://games.raddtrap.live", "_blank");
                         break;
                 }
             },
