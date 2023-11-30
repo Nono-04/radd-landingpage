@@ -154,8 +154,11 @@
             });
 
             const date = new Date();
-            // enable christmas lights in december
-            if (date.getMonth() === 11) {
+            // enable christmas lights from 15th of november till end of december
+            if (
+                (date.getMonth() === 10 && date.getDate() >= 15) ||
+                date.getMonth() === 11
+            ) {
                 this.christmasEnabled = true;
             }
         },
