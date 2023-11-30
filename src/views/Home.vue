@@ -36,6 +36,10 @@
             </v-row>
         </div>
 
+        <div class="lurk-leo">
+            <img src="lurk.png" alt="Lurk Leo" />
+        </div>
+
         <div class="embed" @click="enableEmbed()">
             <div class=" embed greylayer" v-if="!embed">
                 <div class="greylayer-center">
@@ -188,6 +192,35 @@
         left: 50%;
         transform: translateX(-50%);
         margin-top: 2rem;
+    }
+
+    .lurk-leo {
+        position: absolute;
+        left: 0;
+        top: 123px;
+        z-index: 9999;
+    }
+
+    .lurk-leo img {
+        animation: lurk 30s ease-in-out infinite;
+    }
+
+    @keyframes lurk {
+        0% {
+            transform: translateX(-100%);
+        }
+        10% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(0);
+        }
+        60% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
     }
 
     .embed {
