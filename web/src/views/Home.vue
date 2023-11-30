@@ -126,7 +126,7 @@
 
             playSound() {
                 // 1% chance to play different audio
-                if (Math.random() < 0.01) {
+                if (Math.random() < 0.075) {
                     const audio = new Audio("cat2.mp3");
                     audio.play();
                     console.log("Sound played");
