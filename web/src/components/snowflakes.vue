@@ -18,7 +18,6 @@
         <div class="snowflake">❄</div>
         <div class="snowflake">❆</div>
         <div class="snowflake">❄</div>
-        
         <div class="snowflake">❆</div>
         <div class="snowflake">❄</div>
         <div class="snowflake">❆</div>
@@ -26,15 +25,26 @@
     </div>
 </template>
 
+<script>
+    import Vue from "vue";
+
+    export default Vue.extend({
+        name: "Snowflakes",
+        mounted() {
+            console.log("Snowflakes mounted");
+            // delete all snowflakes if use has reduced motion enabled
+            if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                console.warn("Reduced motion enabled, removing snowflakes");
+                const snowflakes = document.getElementsByClassName("snowflake");
+                for (let i = 0; i < snowflakes.length; i++) {
+                    snowflakes[i].remove();
+                }
+            }
+        },
+    });
+</script>
+
 <style scoped>
-    body {
-        background: red;
-    }
-    .intro,
-    .intro a {
-        color: #fff;
-        font-family: ;
-    }
     /* customizable snowflake styling */
     .snowflake {
         color: #fff;
@@ -153,18 +163,5 @@
         left: 90%;
         -webkit-animation-delay: 3s, 1.5s;
         animation-delay: 3s, 1.5s;
-    }
-    /* Demo Purpose Only*/
-    .demo {
-        font-family: "Raleway", sans-serif;
-        color: #fff;
-        display: block;
-        margin: 0 auto;
-        padding: 15px 0;
-        text-align: center;
-    }
-    .demo a {
-        font-family: "Raleway", sans-serif;
-        color: #000;
     }
 </style>
