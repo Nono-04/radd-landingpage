@@ -1,70 +1,66 @@
 <template>
     <div class="container">
-        <v-row>
-            <v-card min-width="315px" class="mx-auto socials noselect">
-                <v-card-title class="title">
-                    <span>You can find me here</span>
-                </v-card-title>
+        <v-card min-width="315px" class="mx-auto socials noselect">
+            <v-card-title class="title">
+                <span>You can find me here</span>
+            </v-card-title>
 
-                <div class="cat-campfire">
-                    <img
-                        class="noselect"
-                        src="catssitting.webp"
-                        @click="playSound()"
-                        alt="Cats on Campfire"
-                    />
-                </div>
-
-                <v-card-text>
-                    <v-row>
-                        <v-col>
-                            <v-btn icon @click="opensocial('twitch')">
-                                <v-icon color="#9146FF">mdi-twitch</v-icon>
-                            </v-btn>
-                        </v-col>
-                        <v-col>
-                            <v-btn icon @click="opensocial('twitter')">
-                                <v-icon color="#1DA1F2">mdi-twitter</v-icon>
-                            </v-btn>
-                        </v-col>
-                        <v-col>
-                            <v-btn icon @click="opensocial('youtube')">
-                                <v-icon color="red">mdi-youtube</v-icon>
-                            </v-btn>
-                        </v-col>
-                        <v-col>
-                            <v-btn icon @click="opensocial('discord')">
-                                <mdi-discord
-                                    style="width: 24px; height: 24px"
-                                    class="v-icon"
-                                ></mdi-discord>
-                            </v-btn>
-                        </v-col>
-                        <v-col>
-                            <v-btn icon @click="opensocial('instagram')">
-                                <v-icon color="#E1306C">mdi-instagram</v-icon>
-                            </v-btn>
-                        </v-col>
-                        <v-col>
-                            <v-btn icon @click="opensocial('ko-fi')">
-                                <v-icon color="#F16061">mdi-coffee</v-icon>
-                            </v-btn>
-                        </v-col>
-                        <v-col>
-                            <v-btn icon @click="opensocial('games')">
-                                <v-icon color="#9146FF">mdi-gamepad-variant</v-icon>
-                            </v-btn>
-                        </v-col>
-                    </v-row>
-                </v-card-text>
-            </v-card>
-        </v-row>
-
-        <v-row>
-            <div class="embed">
-                <stream-embed />
+            <div class="cat-campfire">
+                <img
+                    class="noselect"
+                    src="catssitting.webp"
+                    @click="playSound()"
+                    alt="Cats on Campfire"
+                />
             </div>
-        </v-row>
+
+            <v-card-text>
+                <v-row>
+                    <v-col>
+                        <v-btn icon @click="opensocial('twitch')">
+                            <v-icon color="#9146FF">mdi-twitch</v-icon>
+                        </v-btn>
+                    </v-col>
+                    <v-col>
+                        <v-btn icon @click="opensocial('twitter')">
+                            <v-icon color="#1DA1F2">mdi-twitter</v-icon>
+                        </v-btn>
+                    </v-col>
+                    <v-col>
+                        <v-btn icon @click="opensocial('youtube')">
+                            <v-icon color="red">mdi-youtube</v-icon>
+                        </v-btn>
+                    </v-col>
+                    <v-col>
+                        <v-btn icon @click="opensocial('discord')">
+                            <mdi-discord
+                                style="width: 24px; height: 24px"
+                                class="v-icon"
+                            ></mdi-discord>
+                        </v-btn>
+                    </v-col>
+                    <v-col>
+                        <v-btn icon @click="opensocial('instagram')">
+                            <v-icon color="#E1306C">mdi-instagram</v-icon>
+                        </v-btn>
+                    </v-col>
+                    <v-col>
+                        <v-btn icon @click="opensocial('ko-fi')">
+                            <v-icon color="#F16061">mdi-coffee</v-icon>
+                        </v-btn>
+                    </v-col>
+                    <v-col>
+                        <v-btn icon @click="opensocial('games')">
+                            <v-icon color="#9146FF">mdi-gamepad-variant</v-icon>
+                        </v-btn>
+                    </v-col>
+                </v-row>
+            </v-card-text>
+        </v-card>
+
+        <div class="embed">
+            <stream-embed />
+        </div>
 
         <div class="lurk-leo">
             <img class="noselect" src="lurk.png" alt="Lurk Leo" />
@@ -149,11 +145,12 @@
     .socials {
         left: 50%;
         transform: translateX(-50%);
-        top: 18vh;
+        top: 22vh;
         position: absolute;
     }
 
     .container {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;

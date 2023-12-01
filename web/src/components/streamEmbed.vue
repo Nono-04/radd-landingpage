@@ -1,5 +1,5 @@
 <template>
-    <v-responsive :aspect-ratio="16 / 9" >
+    <v-responsive :aspect-ratio="16 / 9">
         <div id="twitch-embed"></div>
     </v-responsive>
 </template>
