@@ -43,13 +43,21 @@
             window.setInterval(() => {
                 this.reloadCountdown();
             }, 1000);
+
+            window.setInterval(() => {
+                window.location.reload();
+            }, 900000);
         },
     });
 </script>
 
 <style>
     #app {
-        background-color: #fff;
+        background-color: transparent !important;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
     }
 
     .overlay {
@@ -59,30 +67,17 @@
         width: 100%;
         height: 100%;
         text-align: center;
-        background-color: #fff;
-        color: #000;
+        color: white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        border: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    p {
         font-family: "Times New Roman", serif;
         letter-spacing: 5px;
         font-size: 75px;
         font-weight: bold;
-        background-image: linear-gradient(
-            to right,
-            #462523 0,
-            #cb9b51 22%,
-            #f6e27a 45%,
-            #e9e38d 50%,
-            #f6e27a 55%,
-            #cb9b51 78%,
-            #462523 100%
-        );
-        color: transparent;
-        -webkit-background-clip: text;
     }
+
 </style>
