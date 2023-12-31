@@ -1,5 +1,5 @@
 <template>
-    <v-app>
+    <v-app v-if="!$route.meta.isOverlay">
         <v-app-bar dark app hide-on-scroll>
             <v-spacer></v-spacer>
 
@@ -27,6 +27,9 @@
         <v-main>
             <router-view />
         </v-main>
+    </v-app>
+    <v-app v-else>
+        <router-view />
     </v-app>
 </template>
 

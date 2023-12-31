@@ -9,9 +9,12 @@ const routes = [
         component: () => import("../views/Home.vue"),
     },
     {
-        path: "/games",
-        name: "Games",
-        component: () => import("../views/Games.vue"),
+        path: "/overlays/newyear/2024",
+        name: "NewYear2024",
+        component: () => import("../views/overlays/NewYear2024.vue"),
+        meta: {
+            isOverlay: true,
+        },
     }
 ];
 
