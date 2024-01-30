@@ -9,7 +9,7 @@
     "android": "npm run build && npx cap run android"
   },
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.6.0",
     "core-js": "^3.25.0",
     "date-fns": "^2.29.2",
     "eslint": "^8.7.0",
